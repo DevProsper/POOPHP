@@ -33,13 +33,18 @@ class Database
 		    //var_dump("PDO initialise");
 		}
 			//var_dump('PDO Called');
-	    return $pdo;
+	    return $this->pdo;
 	}
 
-	public function query($statement, $class){
+	public function query($statement, $class, $one = false){
 		$req = $this->getPDO()->query($statement);
-		$data = $req->fetchAll(PDO::FETCH_CLASS, $class);
-		return $data;
+		$req->setFetchMode(PDO::FETCH_CLASS, $class);
+		if ($one) {
+			$datas = $req->fetch();
+		}else{
+			$datas = $req->fetchAll();
+		}
+		return $datas;
 	}
 
 	public function prepare($statement, $attributes, $class, $one = false){

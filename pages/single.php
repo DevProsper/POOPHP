@@ -1,6 +1,15 @@
-<h1>Contenu au complet</h1>
+<?php
+use App\App;
+use App\Table\Article;
+use App\Table\Categorie;
 
-<?php $post = $db->prepare('SELECT * FROM articles WHERE id= ?', [$_GET['id']], 'App\Table\Article', true); ?>
+$post = Article::find($_GET['id']);
+if ($post === false) {
+	App::notFound();
+}
+App::setTitle('Ma single page');
+?>
 
-<h2><?= $post->title; ?></h2>
+<h1><?= $post->title; ?></h1>
+<p><em><?= $post->title; ?></em></p>
 <p><?= $post->content; ?></p>
