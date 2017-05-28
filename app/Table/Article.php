@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Table;
 use App\App;
 
@@ -37,7 +37,7 @@ class Article extends Table{
 		", [$category_id]);
 	}
 
-	// Retourne l'url 
+	// Retourne l'url
 	public function getUrl(){
 		return 'index.php?p=single&id=' .$this->id;
 	}
@@ -45,7 +45,7 @@ class Article extends Table{
 	//Retourne l'extrait du contenu
 	public function getExtrait(){
 		$html = '<p>' .substr($this->content, 0, 100) . '</p>';
-		$html .= '<p><a href="'.$this->getURL() .'">Voir la suite</a></p>'; 
+		$html .= '<p><a href="'.$this->getURL() .'">Voir la suite</a></p>';
 		return $html;
 	}
 

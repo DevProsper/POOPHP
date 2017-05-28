@@ -1,4 +1,4 @@
-<?php  
+<?php
 use App\Table\Article;
 use App\Table\Categorie;
 use App\App;
@@ -10,7 +10,6 @@ if ($categorie === false) {
 $articles = Article::lastByCategory($_GET['id']);
 $categories = Categorie::allCat();
 ?>
-<?= $categories->title; ?>
 <div class="row">
 	<h1></h1>
 	<div class="col-sm-8">
