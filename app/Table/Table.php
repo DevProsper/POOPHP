@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Table;
 use App\App;
 
@@ -13,7 +13,7 @@ class Table{
 		}
 		return static::$table;
 	}*/
-
+//Prosper
 	public static function allCat(){
 		return App::getDb()->query(" SELECT * FROM ". static::$table ."
 			", get_called_class());
@@ -31,7 +31,7 @@ class Table{
 		}
 	}
 
-	//Retourne une variable non definie dans la class 
+	//Retourne une variable non definie dans la class
 	public function __get($key){
 		$method = 'get' .ucfirst($key);
 		$this->$key = $this->method();
