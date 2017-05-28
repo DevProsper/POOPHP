@@ -9,7 +9,7 @@
 namespace App\Table;
 
 
-class PostsTable
+class PostsTable extends  Table
 {
 
 }

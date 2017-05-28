@@ -7,7 +7,7 @@
  */
 
 return array(
-    "db_pass" => "root",
+    "db_pass" => "",
     "db_user" => "root",
     "db_host" => "localhost",
     "db_name" => "poo"

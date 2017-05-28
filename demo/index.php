@@ -6,4 +6,3 @@
  * Time: 14:53
  */
 
-var_dump(CarFactory::getCar('D'));

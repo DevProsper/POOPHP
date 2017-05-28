@@ -9,7 +9,7 @@
 namespace App\Table;
 
 
-class CategoriesTable
+class CategoriesTable extends Table
 {
 
 }
