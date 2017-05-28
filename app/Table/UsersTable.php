@@ -9,7 +9,7 @@
 namespace App\Table;
 
 
-class Table
+class UserTable
 {
 
 }

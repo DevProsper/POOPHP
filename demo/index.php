@@ -3,13 +3,7 @@
  * Created by Prosper.
  * User: hp
  * Date: 28/05/2017
- * Time: 15:02
+ * Time: 14:53
  */
 
-namespace App\Table;
-
-
-class Table
-{
-
-}
+var_dump(CarFactory::getCar('D'));
