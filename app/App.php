@@ -19,7 +19,7 @@ class App{
 
 	public function getTable($name){
 		$class_name = '\\App\\Table\\' .ucfirst($name). 'Table';
-		//Injection de dependance:  Passer la db en parametre pour eviter d'instancier l'objet db dans chaque classe
+		//Injection de dependance:  Passer la db en parametre pour eviter d'instancier l'objet db dans chaque lancement
 		return new $class_name($this->getDb());
 	}
 
